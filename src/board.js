@@ -2,18 +2,23 @@ import React from "react";
 import * as utils from "./utils.js";
 
 function Square(props) {
-  const squareClasses = props["squareClasses"];
+  let squareClasses = props["squareClasses"];
   const onClick = props["onClick"];
+  if (squareClasses.includes("player1")) {
+    squareClasses = squareClasses + " " + props.houses[0];
+  } else if (squareClasses.includes("player2")) {
+    squareClasses = squareClasses + " " + props.houses[1];
+  }
 
+  console.log("square " + squareClasses);
   return <button className={"square " + squareClasses} onClick={onClick} />;
 }
-
-//If there is time, implement total Annihilation/Danerys play.
 
 export default class Board extends React.Component {
   renderSquare(coordinates, squareClasses) {
     return (
       <Square
+        houses={this.props.houses}
         key={coordinates}
         squareClasses={squareClasses}
         onClick={() => this.props.onClick(coordinates)}

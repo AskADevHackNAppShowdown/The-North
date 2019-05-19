@@ -100,17 +100,32 @@
   background-color: #262626;
 }
 
-.square.player1 {
+/* .square.player1 {
   background-image: url("img/red-pawn.png");
 }
 .square.player2 {
   background-image: url("img/blue-pawn.png");
-}
+} */
 .square.player1.king {
   background-image: url("img/red-king.png");
 }
 .square.player2.king {
   background-image: url("img/blue-king.png");
+}
+.square.Lannister {
+  background-image: url("img/lannister.png");
+}
+
+.square.Stark {
+  background-image: url("img/stark.png");
+}
+
+.square.Baratheon {
+  background-image: url("img/baratheon.png");
+}
+
+.square.Bolton {
+  background-image: url("img/bolton.PNG");
 }
 
 @media only screen and (max-width: 700px) {
