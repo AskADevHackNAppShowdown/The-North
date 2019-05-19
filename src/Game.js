@@ -382,7 +382,7 @@ export class Game extends React.Component {
       return (
         <Router history={browserHistory} basename={"react-checkers"}>
           <div className='players-select'>
-            <div className='one-player'>
+            <div>
               Player One House:
               <select
                 value={this.state.playerOne}
